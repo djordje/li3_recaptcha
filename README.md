@@ -1,12 +1,13 @@
-# reCAPTCHA plugin for Lithium PHP framework
+# reCAPTCHA plugin for [Lithium PHP framework](http://github.com/UnionOfRAD/lithium)
 
 Plugin that enable easy interactions with [Googles reCAPTCHA API](http://www.google.com/recaptcha)
 
 **Created by** [Djordje Kovacevic](http://github.com/djordje) 2012-05-26
 
-**Thanks to** @gwoo and @nateabele for helping on #li3 chanel!
+**Thanks to** @[gwoo](http://github.com/gwoo) and
+@[nateabele](http://github.com/nateabele) for helping on #li3 chanel!
 
-## Installationand configuration
+## Installation and configuration
 
 Checkout the code to either of your library directories:
 
@@ -25,14 +26,41 @@ and pass your reCAPTCHA keys as config:
 		)
 	));
 
+**WARNING:** You must provide `public` and `private` keys or this plugin will not work!
+
+Additionaly you can pass `options` for configuring `RecaptchaOptions` look and feel,
+this will be global for your application, but you can override it by passing new `options`
+to helpers `challenge()` method.
+
+**See [Customizing the Look and Feel of reCAPTCHA](https://developers.google.com/recaptcha/docs/customization)
+for available options.**
+	
+	Libraries::add('li3_recaptcha', array(
+		'options' => array(
+			'theme' => 'white'
+		)
+	));
+
 ## Usage
 
 This plugin provide template helper `li3_recaptcha\extensions\helper\Recaptcha`,
-you can use it in your template `$this->recaptcha->{method}()`
+you can use it in your template `$this->recaptcha->{method}()`.
 
-If you want to create reCAPTCHA challenge field you add `$this->recptcha->challenge()` to your form
+**Challenge**
 
-For hidding email you use `$this->recaptcha->mailhide($email)`
+If you want to create reCAPTCHA challenge field you add `$this->recptcha->challenge()` to your form.
+
+You can also pass `RecaptchaOptions` as param to `challenge()` method:
+
+	$this->recaptcha->challenge(array(
+		'theme' => 'blackglass'
+	));
+
+**Mailhide**
+
+For hidding email you use `$this->recaptcha->mailhide($email)`.
+
+**Checking challenge field in your controller**
 
 To check your reCAPTCHA challenge answare you add to action in your controller something like this:
 
