@@ -1,0 +1,18 @@
+{
+	"name": "djordje/li3_recaptcha",
+	"type": "li3-libraries",
+	"description": "Plugin that enable easy interactions with Googles reCAPTCHA API from Lithium PHP framework",
+	"keywords": ["recaptcha", "php", "captcha", "lithium", "li3"],
+	"homepage": "https://github.com/djordje/li3_recaptcha",
+	"license": "BSD-3-Clause",
+	"minimum-stability": "dev",
+	"authors": [
+		{
+			"name": "Djordje Kovacevic",
+			"homepage": "https://djordjekovacevic.com"
+		}
+	],
+	"require": {
+		"php": ">=5.3"
+	}
+}
