@@ -13,6 +13,7 @@
 		}
 	],
 	"require": {
-		"php": ">=5.3"
+		"php": ">=5.3",
+		"joseym/li3_installer": "master"
 	}
 }
