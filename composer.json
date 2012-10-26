@@ -1,6 +1,6 @@
 {
 	"name": "djordje/li3_recaptcha",
-	"type": "lithium-libraries",
+	"type": "lithium-library",
 	"description": "Plugin that enable easy interactions with Googles reCAPTCHA API from Lithium PHP framework",
 	"keywords": ["recaptcha", "php", "captcha", "lithium", "li3"],
 	"homepage": "https://github.com/djordje/li3_recaptcha",
