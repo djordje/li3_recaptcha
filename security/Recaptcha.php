@@ -23,11 +23,11 @@ class Recaptcha {
 	/**
 	 * Check request reCAPTCHA validity
 	 * This method return `true` or `false` after validation, and set error in
-	 * helper. If `true` error is set to null, otherwise 'incorrect-captcha-sol'
+	 * helper. If `true` error is set to null, otherwise `'incorrect-captcha-sol'`
 	 * 
 	 * Example:
 	 * {{{
-	 *		class YourController extends \lithium\actionController {
+	 *		class YourController extends \lithium\action\Controller {
 	 *			public function index() {
 	 *				if ($this->request->data) {
 	 *					if (!Recaptcha::check($this->request)) {
@@ -81,7 +81,7 @@ class Recaptcha {
 	}
 
 	/**
-	 * Create URL for hidding email
+	 * Create URL for hiding email
 	 * @param string $email
 	 * @return string
 	 * @throws ConfigException 
@@ -149,7 +149,7 @@ class Recaptcha {
 	}
 
 	/**
-	 * Create query string from _array_ of `key => value` pairs
+	 * Create query string from _array_ of `'key' => 'value'` pairs
 	 * 
 	 * Example:
 	 * {{{
@@ -160,7 +160,7 @@ class Recaptcha {
 	 *		//return `key=value&key2=value2`
 	 * }}}
 	 * 
-	 * @param array $data `key => value paris` for converting to query string
+	 * @param array $data `'key' => 'value'` paris for converting to query string
 	 * @return string
 	 */
 	protected static function _qsEncode($data) {

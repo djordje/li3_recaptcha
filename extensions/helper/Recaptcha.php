@@ -15,8 +15,8 @@ use lithium\util\Set;
 class Recaptcha extends \lithium\template\Helper {
 	
 	/**
-	 * reCAPTCHA error place holder
-	 * Recaptcha::check() set it to 'incorrect-captcha-sol' on error
+	 * reCAPTCHA error placeholder
+	 * `Recaptcha::check()` set it to `'incorrect-captcha-sol'` on error
 	 * @see \li3_recaptcha\security\Recaptcha
 	 * @var string
 	 */
@@ -50,7 +50,7 @@ class Recaptcha extends \lithium\template\Helper {
 	 * @param array $options `'key' => 'value'` pairs to be converted to javascript
 	 * object as `RecaptchaOptions`
 	 * @see https://developers.google.com/recaptcha/docs/customization
-	 * @return null|string return null if you don't have additional options
+	 * @return null|string Return null if you don't have additional options
 	 * or script with `RecaptchaOptions` object
 	 */
 	protected function _recaptchaOptions(array $options = array()) {
@@ -72,7 +72,7 @@ class Recaptcha extends \lithium\template\Helper {
 
 	/**
 	 * Create reCAPTCHA challenge field
-	 * If you pass $options or you have set `'options'` key on library adding
+	 * If you pass `$options` or you have set `'options'` key on library adding
 	 * create `RecaptchaOptions` object to configure look and feel of your
 	 * challenge field.
 	 * 
