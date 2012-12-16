@@ -1,3 +1,6 @@
+[![project status](http://stillmaintained.com/djordje/li3_recaptcha.png)]
+(http://stillmaintained.com/djordje/li3_recaptcha)
+
 # reCAPTCHA plugin for [Lithium PHP framework](http://github.com/UnionOfRAD/lithium)
 
 Plugin that enable easy interactions with [Googles reCAPTCHA API](http://www.google.com/recaptcha)
