@@ -12,13 +12,27 @@ Plugin that enable easy interactions with [Googles reCAPTCHA API](http://www.goo
 
 ## Installation and configuration
 
-Checkout the code to either of your library directories:
+**1a.** Checkout the code to either of your library directories:
 
 	cd libraries
 	git clone git://github.com/djordje/li3_recaptcha.git
 
-Include library in your `app/config/bootstrap/libraries.php`,
+**1b.** Or if you use **composer** you can add this to your `composer.json` file:
+
+```json
+
+	{
+		"require": {
+			"djordje/li3_recaptcha": "v1.0.0"
+		}
+	}
+
+```
+
+**2.** Include library in your `app/config/bootstrap/libraries.php`,
 and pass your reCAPTCHA keys as config:
+
+```php
 
 	Libraries::add('li3_recaptcha', array(
 		'keys' => array(
@@ -29,6 +43,8 @@ and pass your reCAPTCHA keys as config:
 		)
 	));
 
+```
+
 **WARNING:** You must provide `public` and `private` keys or this plugin will not work!
 
 Additionaly you can pass `options` for configuring `RecaptchaOptions` look and feel,
@@ -37,12 +53,16 @@ to helpers `challenge()` method.
 
 **See [Customizing the Look and Feel of reCAPTCHA](https://developers.google.com/recaptcha/docs/customization)
 for available options.**
-	
+
+```php
+
 	Libraries::add('li3_recaptcha', array(
 		'options' => array(
 			'theme' => 'white'
 		)
 	));
+
+```
 
 ## Usage
 
@@ -55,9 +75,13 @@ If you want to create reCAPTCHA challenge field you add `$this->recptcha->challe
 
 You can also pass `RecaptchaOptions` as param to `challenge()` method:
 
+```php
+
 	$this->recaptcha->challenge(array(
 		'theme' => 'blackglass'
 	));
+
+```
 
 **Mailhide**
 
@@ -67,9 +91,13 @@ For hidding email you use `$this->recaptcha->mailhide($email)`.
 
 To check your reCAPTCHA challenge answare you add to action in your controller something like this:
 
+```php
+
 	if ($this->request->data && Recaptcha::check($this->request)) {
 		// Do some stuff for users that passed reCAPTCHA check
 	}
+
+```
 
 ## Testing
 
